@@ -26,12 +26,12 @@ public class WordDAO {
 	
 	
 	
-	public ArrayList<Word> getWordsByLength(String wordLength) throws SQLException{
+	public ArrayList<Word> getWordsByLength(int wordLength) throws SQLException{
 		
 		ArrayList<Word> listOfWords = new ArrayList<Word>();
 		
 		PreparedStatement ps = connection.prepareStatement("SELECT * FROM Dictionary WHERE WordLength = ?");
-		ps.setString(1, wordLength);
+		ps.setInt(1, wordLength);
 		
 		ResultSet result = ps.executeQuery();
 		

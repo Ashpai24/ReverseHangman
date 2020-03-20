@@ -13,7 +13,6 @@ public class Word {
 		this.length = length;
 	}
 	
-	
 	//Setters and Getters for Instance Variables
 	public String getWordName() {
 		return wordName;
