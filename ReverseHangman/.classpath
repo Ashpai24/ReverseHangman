@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="C:/Users/SHWIN-PC/Documents/gson-2.6.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/SHWIN-PC/Documents/mysql-connector-java-5.1.6.jar"/>
 	<classpathentry kind="lib" path="C:/Users/SHWIN-PC/Documents/simpleJSON.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

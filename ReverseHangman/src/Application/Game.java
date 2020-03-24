@@ -8,15 +8,26 @@ import database.WordDAO;
 
 public class Game {
 	
-	public ArrayList<Word> listOfWords = new ArrayList<>();
-	public ArrayList<String> lettersUsed = new ArrayList<>();
-	public WordDAO dataAccessObject = new WordDAO();
-	public int lengthOfWord;
+	private ArrayList<Word> listOfWords = new ArrayList<>();
+	private ArrayList<Character> lettersUsed = new ArrayList<>();
+	private WordDAO dataAccessObject = new WordDAO();
+	private int lengthOfWord;
 	
 	public Game(int len) throws SQLException {
 		
 		
 		listOfWords = dataAccessObject.getWordsByLength(len);
+	}
+	
+	public void checkIndexOfWords(char character, int index) {
+		
+		//Looping through list of words. 
+		for(int i = 0; i < listOfWords.size(); i++) {
+			if(listOfWords.get(i).getWordName().charAt(index) != character) {
+				//Remove the word from the list if the character does not exist in the word. 
+				listOfWords.remove(i);
+			}
+		}
 	}
 	
 	public String getCommonLetter() {
